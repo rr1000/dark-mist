@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+    # Redirect example
+    # get '/h', to: 'static_pages#home'
+    root 'static_pages#home'
 end
