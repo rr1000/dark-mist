@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.0.0.1'
+gem 'bcrypt',         '3.1.11'
 gem 'bootstrap-sass', '3.3.6'
 gem 'puma',         '3.4.0'
 gem 'sass-rails',   '5.0.6'
@@ -11,7 +12,7 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.11'
+  gem 'pg', '0.18.4'
   gem 'byebug',  '9.0.0', platform: :mri
 end
 
@@ -29,6 +30,6 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
 end
 
-group :production do
-  gem 'pg', '0.18.4'
-end
+# group :production do
+#   gem 'pg', '0.18.4'
+# end
