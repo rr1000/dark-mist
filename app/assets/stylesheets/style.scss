@@ -4,6 +4,14 @@
 $c_black: #010101;
 $c_white: #ffffff;
 $c_border: #dddddd;
+$c_d-red: #a94442;
+// Mixins
+@mixin box_sizing{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 // Header
 .main-header{
     background-color: $c_black;
@@ -86,5 +94,88 @@ article{
         margin: 0px 0px 20px 0px;
         padding: 0px;
         &:last-of-type{margin: 0px;}
+    }
+}
+// Debugging
+.debug_dump{
+    background-color: $c_black;
+    color: #39FFBC;
+    margin: 50px;
+    border: 0px;
+}
+// Profile
+.profile{
+    @extend .masthead;
+    background-color: $c_black;
+    h1{float: left;margin: 0px 0px 0px 20px;color: $c_white;}
+    .grav{
+        height: 55px;
+        width: 55px;
+        float: left;
+        img{
+            display: block;
+            max-width: 100%;
+            border-radius: 30px;
+            border: 2px solid $c_white;
+        }
+    }
+    .meta{
+        background-color: rgba(255,255,255,0.1);
+        padding: 20px;
+        margin: 20px 0px 0px 0px;
+        max-width: 550px;
+        border-radius: 5px;
+        p{color: rgba(255,255,255,0.5);em{color: $c_white;font-weight: bold;font-style: normal;}}
+    }
+}
+// Forms
+.signup{
+    @extend .masthead;
+    h1{text-align: center;}
+}
+form{
+    margin: 0px auto;
+    padding: 20px;
+    max-width: 550px;
+    border: 2px solid $c_black;
+    input.form-control{
+        border-radius: 0px;
+        display: block;
+        width: 100%;
+        margin: 5px 0px 20px 0px;
+        border: 2px solid $c_black;
+        padding: 10px;
+    }
+    label{color: $c_black;}
+    .button-submit{
+        border: 0px;
+        width: 100%;
+        display: block;
+        padding: 5px 10px;
+        color: $c_white;
+        background-color: $c_black;
+        margin: 0px 0px 0px 0px;
+    }
+}
+// Alerts
+.alert{border: 2px solid transparent;border-radius: 0px;}
+.alert-danger{border: 2px solid $c_d-red;}
+.page-alerts{.alert{margin: 0px;}}
+#error_explanation{
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        li{
+            border-radius: 5px;
+            margin: 0px 0px 10px 0px;
+            display: block;
+            padding: 0px 0px 0px 10px;
+            border: 0px;
+            border-left: 2px solid $c_d-red;
+            @extend .alert-danger;
+            background-color: transparent;
+            border-radius: 0px;
+        }
     }
 }

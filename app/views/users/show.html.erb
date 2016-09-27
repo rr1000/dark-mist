@@ -1,0 +1,13 @@
+<% provide(:title, @user.name) %>
+<section class="profile">
+    <div class="container">
+        <div class="grav"><%= gravatar_for @user %></div>
+        <h1><%= @user.name %></h1>
+    </div>
+    <div class="container">
+        <div class="meta">
+            <p><em>Join Date:</em> <%= @user.created_at.strftime("%Y") %></p>
+            <p><em>Email:</em> <%= @user.email %></p>
+        </div>
+    </div>
+</section>
