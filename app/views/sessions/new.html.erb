@@ -1,0 +1,14 @@
+<% provide(:title, "Sign in to your account") %>
+<section class="signup">
+    <div class="container">
+        <h1>Sign In</h1>
+            <%= form_for(:session, url: signin_path) do |f| %>
+                <%= f.label :email %>
+                <%= f.email_field :email, class: 'form-control' %>
+                <%= f.label :password %>
+                <%= f.password_field :password, class: 'form-control' %>
+                <%= f.submit "Log in", class: "button-submit" %>
+            <% end %>
+        <p>New user? <%= link_to "Register", register_path %></p>
+    </div>
+</section>
