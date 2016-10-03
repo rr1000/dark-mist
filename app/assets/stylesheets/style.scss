@@ -5,6 +5,7 @@ $c_black: #010101;
 $c_white: #ffffff;
 $c_border: #dddddd;
 $c_d-red: #a94442;
+$c_gray: #f4f4f4;
 // Type
 $f_sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 body{
@@ -218,6 +219,13 @@ form{
         background-color: $c_black;
         margin: 0px 0px 0px 0px;
     }
+}
+.radio-group{
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
+    background-color: $c_gray;
+    border: 2px solid $c_border;
+    p{margin: 0px; padding: 0px;}
 }
 // Alerts
 .alert{border: 2px solid transparent;border-radius: 0px;}
